@@ -12,6 +12,9 @@ use App\Http\Controllers\CatatanHutangController;
 use App\Http\Controllers\CompanyCRUDController;
 use App\Http\Controllers\PerusahaanCRUDController;
 use App\Http\Controllers\UserYajra;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
 
 
 Auth::routes();
@@ -80,3 +83,27 @@ Route::post('delete-perusahaan', [PerusahaanCRUDController::class,'destroy']);
 Route::get("useryajra", [UserYajra::class, "users"])->name('useryajra.index');
 Route::get("useryajra/create", [UserYajra::class, "create"])->name('useryajra.create');
 Route::post("useryajra/store", [UserYajra::class, "store"])->name('useryajra.store');
+
+//contoh CRUD 4 Student - image upload
+Route::get('students', [StudentController::class, 'index']);
+Route::get('add-student', [StudentController::class, 'create']);
+Route::post('add-student', [StudentController::class, 'store']);
+Route::get('edit-student/{id}', [StudentController::class, 'edit']);
+Route::put('update-student/{id}', [StudentController::class, 'update']);
+Route::delete('delete-student/{id}', [StudentController::class, 'destroy']);
+
+
+///contoh CRUD 5 product - image upload
+Route::resource('products', ProductController::class);
+
+
+///CONTOH ADD TO CART 1
+// shopping cart
+// Route::group(['middleware' => 'auth'], function() {
+//     // cart
+//     Route::resource('cart', CartController::class);
+//     Route::patch('cart/kosongkan/{id}', [CartController::class, 'kosongkan']);
+//     // cart detail
+//     Route::resource('cartdetail', CartDetailController::class);
+//   });
+///ENDCONTOH ADD TO CART 1

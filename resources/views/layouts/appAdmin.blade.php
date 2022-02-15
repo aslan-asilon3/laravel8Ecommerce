@@ -54,14 +54,45 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="dashboard.html" class="nav-link">
+               <li class="nav-item">
+                <a href="" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Dashboard
+                    Produk
                 </p>
                 </a>
+               </li>
+
+               <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                Contoh Dashboard
+                <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="../../index2.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v2</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="../../index3.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v3</p>
+                    </a>
+                    </li>
+                </ul>
             </li>
+
             <li class="nav-item">
                 <a href="{{route('produk.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -87,12 +118,42 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                Contoh Add to Cart
+                <i class="right fas fa-angle-left"></i>
+                </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                    <a href="" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add to Cart 1 </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="../../index2.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v2</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="../../index3.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v3</p>
+                    </a>
+                    </li>
+                </ul>
+            </li>
+
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-smile"></i>
               <p>
-                Contoh
+                Contoh CRUD
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
@@ -134,9 +195,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="/students" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>CRUD 4 Studet - Upload Image</p>
+                  <p>CRUD 4 Student - Upload Image</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/products" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>CRUD 5 product - image upload</p>
                 </a>
               </li>
             </ul>
@@ -175,7 +242,7 @@
 
 
           <li class="nav-item">
-            <a href="listbooking.html" class="nav-link">
+            <a href="{{ route('logout') }}" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
